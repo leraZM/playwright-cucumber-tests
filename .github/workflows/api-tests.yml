@@ -22,7 +22,7 @@ jobs:
         run: npm install # Install from root package.json
 
       - name: Run API Tests
-        run: npx playwright test
+        run: npx playwright test --config=src/api-tests/playwright.config.js
 
       - name: Upload API Test Report
         uses: actions/upload-artifact@v4
