@@ -3,13 +3,13 @@
     "formatOptions": {
       "snippetInterface": "async-await"
     },
-    "paths": ["src/features/**/*"],
-    "require": ["src/steps/*.ts", "src/support/hooks.ts"],
+    "paths": ["src/ui-tests/features/**/*"],
+    "require": ["src/ui-tests/steps/*.ts", "src/ui-tests/support/hooks.ts"],
     "requireModule": ["ts-node/register"],
     "format": [
       "progress-bar",
-      "html:src/report/cucumber-report.html",
-      "json:src/report/cucumber-report.json"
+      "html:src/ui-tests/report/cucumber-report.html",
+      "json:src/ui-tests/report/cucumber-report.json"
     ],
     "parallel": 2
   }

@@ -1,3 +1,4 @@
 node_modules
 .DS_Store
-/src/report
+/src/ui-tests/report
+/src/api-tests/api-report

@@ -22,8 +22,11 @@ The following technologies are used in this automation framework:
 # Install dependencies
 npm install
 
-# Run tests
-npm run test
+# Run UI tests
+npm run test:ui
+
+# Run API tests
+npm run test:api
 ```
 
 #### GitHub Actions:
@@ -44,9 +47,11 @@ Each feature file contains **one critical scenario per feature**. This approach 
 
 The **Cucumber layer** provides **clear documentation** and serves as **living documentation** for the project over time.
 
-##### 🔗 API
+##### 🔗 API Tests
 
-To be added...
+- The API tests are located in the **`api.spec.ts`** file.
+- The tests include both **successful and unsuccessful scenarios**.
+- **Validation covers both status codes and response schemas**.
 
 ## 📌 Next Steps
 

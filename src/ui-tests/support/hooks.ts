@@ -29,7 +29,7 @@ Before(async () => {
 After(async ({ pickle, result }) => {
   if (result?.status == Status.FAILED) {
     await pageFixture.page.screenshot({
-      path: `./src/report/screenshots/${pickle.name}.png`,
+      path: `./src/ui-tests/report/screenshots/${pickle.name}.png`,
       type: 'png',
     });
   }
