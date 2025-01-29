@@ -1,0 +1,34 @@
+name: UI Tests
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ui-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm install # Install from root package.json
+
+      - name: Install Playwright Browsers
+        run: npx playwright install
+
+      - name: Run UI Tests
+        run: npx cucumber-js --config src/ui-tests/cucumber.json
+
+      - name: Upload UI Test Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: ui-test-report
+          path: src/ui-tests/report

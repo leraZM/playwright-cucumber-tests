@@ -1,0 +1,31 @@
+name: API Tests
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  api-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm install # Install from root package.json
+
+      - name: Run API Tests
+        run: npx playwright test --config=src/api-tests/playwright.config.js
+
+      - name: Upload API Test Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: api-test-report
+          path: src/api-tests/api-report
