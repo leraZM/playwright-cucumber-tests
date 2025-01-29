@@ -10,14 +10,14 @@ export class LoginPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.usernameField = page.locator('#user-name');
-    this.passwordField = page.locator('#password');
-    this.loginButton = page.locator('#login-button');
+    this.usernameField = page.locator('[data-test="username"]');
+    this.passwordField = page.locator('[data-test="password"]');
+    this.loginButton = page.locator('[data-test="login-button"]');
     this.errorMessage = page.locator('[data-test="error"]');
   }
 
   async open() {
-    const baseUrl = process.env.BASE_URL || BASE_URL;
+    const baseUrl = BASE_URL;
     await this.page.goto(baseUrl);
   }
 

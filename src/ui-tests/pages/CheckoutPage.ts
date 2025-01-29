@@ -15,16 +15,16 @@ export class CheckoutPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.firstNameField = page.locator('#first-name');
-    this.lastNameField = page.locator('#last-name');
-    this.checkoutButton = page.locator('#checkout');
-    this.postalCodeField = page.locator('#postal-code');
-    this.continueButton = page.locator('#continue');
-    this.itemName = page.locator('.inventory_item_name');
-    this.itemPrice = page.locator('.inventory_item_price');
-    this.itemQuantity = page.locator('.cart_quantity');
-    this.itemSubtotal = page.locator('.summary_subtotal_label');
-    this.finishButton = page.locator('#finish');
+    this.firstNameField = page.locator('[data-test="firstName"]');
+    this.lastNameField = page.locator('[data-test="lastName"]');
+    this.checkoutButton = page.locator('[data-test="checkout"]');
+    this.postalCodeField = page.locator('[data-test="postalCode"]');
+    this.continueButton = page.locator('[data-test="continue"]');
+    this.itemName = page.locator('[data-test="inventory-item-name"]');
+    this.itemPrice = page.locator('[data-test="inventory-item-price"]');
+    this.itemQuantity = page.locator('[data-test="item-quantity"]');
+    this.itemSubtotal = page.locator('[data-test="subtotal-label"]');
+    this.finishButton = page.locator('[data-test="finish"]');
   }
 
   async clickCheckoutButton() {

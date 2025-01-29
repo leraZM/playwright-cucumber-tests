@@ -7,8 +7,8 @@ export class InventoryPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.cartBadge = page.locator('.shopping_cart_badge');
-    this.cartButton = page.locator('.shopping_cart_link');
+    this.cartBadge = page.locator('[data-test="shopping-cart-badge"]');
+    this.cartButton = page.locator('[data-test="shopping-cart-link"]');
   }
 
   async addToCart(productName: string) {
