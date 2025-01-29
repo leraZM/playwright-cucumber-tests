@@ -25,9 +25,7 @@ jobs:
         run: npx playwright install
 
       - name: Run UI Tests
-        run: |
-          cd src/ui-tests
-          npx cucumber-js --config src/../../cucumber.json
+        run: npx cucumber-js --config cucumber.json
 
       - name: Upload UI Test Report
         uses: actions/upload-artifact@v4

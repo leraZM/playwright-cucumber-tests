@@ -33,7 +33,7 @@ npm run test:api
 
 The tests can also be executed as part of the **CI/CD pipeline** in **GitHub Actions**.
 
-To be added...
+A workflow runs API and UI tests whenever a pull request is created for the main branch.
 
 ## 🔍 Approach
 
