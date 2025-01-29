@@ -16,7 +16,7 @@ The following technologies are used in this automation framework:
 
 ## 🚀 How to run the tests
 
-#### From the command line:
+### From the command line:
 
 ```sh
 # Install dependencies
@@ -29,7 +29,7 @@ npm run test:ui
 npm run test:api
 ```
 
-#### GitHub Actions:
+### GitHub Actions:
 
 The tests can also be executed as part of the **CI/CD pipeline** in **GitHub Actions**.
 
@@ -37,7 +37,7 @@ To be added...
 
 ## 🔍 Approach
 
-##### 📝 UI Feature Breakdown
+### 📝 UI Feature Breakdown
 
 Each feature file contains **one critical scenario per feature**. This approach is scalable and allows for building more extensive test coverage per feature. The selected scenarios automate the **happy path** for the most critical functionalities of the **e-commerce website** from an **end-user perspective**.
 
@@ -47,7 +47,7 @@ Each feature file contains **one critical scenario per feature**. This approach 
 
 The **Cucumber layer** provides **clear documentation** and serves as **living documentation** for the project over time.
 
-##### 🔗 API Tests
+### 🔗 API Tests
 
 - The API tests are located in the **`api.spec.ts`** file.
 - The tests include both **successful and unsuccessful scenarios**.
