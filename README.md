@@ -19,6 +19,9 @@ The following technologies are used in this automation framework:
 ### From the command line:
 
 ```sh
+# Install Playwright
+npx playwright install
+
 # Install dependencies
 npm install
 
